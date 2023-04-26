@@ -15,7 +15,7 @@ app.get("/",(req,res)=>{
     res.send("Working successfully")
 })
 app.use("/taskRoutes",TodoRoutes);
-app.listen("7000",err=>{
+app.listen(process.env.PORT,err=>{
     if(err) console.log(err);
     else console.log("Server started at port")
 })
